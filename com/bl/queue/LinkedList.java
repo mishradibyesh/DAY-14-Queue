@@ -23,11 +23,26 @@ public class LinkedList {
 
 		size++;
 	}
+
 	//method to show peak element in queue
 	public void peak() {
 		System.out.println(head.getData()) ;
 	}
 
+	// delete at first method
+	public void popAtFirst() {
+		Node temp;
+		temp=head;
+			System.out.print("peak in stack is ");
+			peak();
+			temp=temp.getNext();
+			head = temp;
+			size--;
+			System.out.println("pop operation done !");
+		if(head == null) {
+			System.out.println("the stack is empty now");
+		}
+	}
 
 	//display queue elements
 	public void display() {
